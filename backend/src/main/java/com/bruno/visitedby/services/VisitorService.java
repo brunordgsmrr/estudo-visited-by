@@ -21,5 +21,11 @@ public class VisitorService {
 		
 		return result.stream().map(x -> new VisitorDTO(x)).toList();
 	}
+	
+	public void addVisitor(VisitorDTO visitorDTO) {
+		Visitor newVisitor = new Visitor();
+		newVisitor.setName(visitorDTO.getName());
+		visitorRepository.save(newVisitor);
+	}
 
 }
