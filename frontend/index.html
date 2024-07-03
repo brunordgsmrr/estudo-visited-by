@@ -1,13 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>VisitedBy</title>
+</head>
+
+<body>
+    <h1>Olá visitante!</h1>
+    <p>Deixe seu nome ou apelido e faça parte desse projetinho</p>
+    <form class="form">
+        <label for="name">Nome</label>
+        <input type="text" id="name" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <table>
+        <thead>
+            <th>Nome</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>bruno</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="app/domain/visitor/Visitor.js"></script>
+    <script src="script.js"></script>
+    <script>
+        const visitor = new Visitor('Bruno', new Date())
+    </script>
+</body>
+
 </html>

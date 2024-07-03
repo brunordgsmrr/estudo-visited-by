@@ -1,0 +1,10 @@
+table{
+    border: solid 1px black;
+    border-spacing: 0;
+    
+}
+
+table tbody tr td{
+    
+    border: solid 1px red;
+}
