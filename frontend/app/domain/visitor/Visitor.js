@@ -1,8 +1,8 @@
 class Visitor {
-    constructor(name, date) {
-        this._name = name;
-        this._date = date;
-        Object.freeze(this)
+    constructor(_name, _date) {
+        Object.assign(this, { _name });
+        this._date = new Date(date.getTime());
+        Object.freeze(this);
     }
 
     get name() {
@@ -10,6 +10,6 @@ class Visitor {
     }
 
     get date() {
-        return this._date;
+        return new Date(this._date.getTime());
     }
 }
